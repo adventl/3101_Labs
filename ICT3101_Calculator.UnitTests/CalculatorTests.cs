@@ -24,8 +24,6 @@ namespace ICT3101_Caculator.UnitTests
         }
 
         [Test]
-        [TestCase(0, 0)]
-        [TestCase(0, 10)]
         [TestCase(10, 0)]
         public void Divide_WithNegativeInputs_ResultThrowArgumentException(int a, int b)
         {
