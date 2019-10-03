@@ -4,13 +4,12 @@
 	I want to be told the sum of two numbers
 
 @Factorial
-Scenario Outline: Add two numbers
+Scenario Outline: Factorial a number
 	Given I have a calculator
 	When I press "<value1>" and press factorial
 	Then the factorial result should be "<value2>" on the screen
 	Examples:
 	|value1 |value2 |
-	|0		|1		|
 	|1		|1		|
 	|2		|2		|
 	|3		|6		|

@@ -90,7 +90,11 @@ namespace Program
 
         public int Factorial_Recursion(int number)
         {
-            if (number == 1)
+            if (number < 0)
+            {
+                throw new ArgumentException();
+            }
+            else if (number == 1 || number == 0)
             {
                 return 1;
             }

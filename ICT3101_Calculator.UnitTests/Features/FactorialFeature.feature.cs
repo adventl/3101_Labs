@@ -71,14 +71,13 @@ namespace ICT3101_Calculator.UnitTests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add two numbers")]
+        [NUnit.Framework.DescriptionAttribute("Factorial a number")]
         [NUnit.Framework.CategoryAttribute("Factorial")]
-        [NUnit.Framework.TestCaseAttribute("0", "1", null)]
         [NUnit.Framework.TestCaseAttribute("1", "1", null)]
         [NUnit.Framework.TestCaseAttribute("2", "2", null)]
         [NUnit.Framework.TestCaseAttribute("3", "6", null)]
         [NUnit.Framework.TestCaseAttribute("4", "24", null)]
-        public virtual void AddTwoNumbers(string value1, string value2, string[] exampleTags)
+        public virtual void FactorialANumber(string value1, string value2, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "Factorial"};
@@ -86,7 +85,7 @@ namespace ICT3101_Calculator.UnitTests.Features
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", null, @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Factorial a number", null, @__tags);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
