@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text;
 
 namespace Program
 {
@@ -176,5 +174,19 @@ namespace Program
         {
             return totalFailures * (1 - Math.Exp(-1 * ((double) currentFailure / (double) totalFailures) * time));
         }
+
+        public double GenMagicNum(int choice, IFileReader fileReader)
+        {
+            double result = 0;
+
+            string[] magicStrings = fileReader.Read("D:\\Documents\\Dropbox\\SIT\\3101 - Software Verification and Validation\\Lab 1\\Lab1\\3101_Calculator\\MagicNumbers.txt");
+            if ((choice >= 0) && (choice < magicStrings.Length))
+            {
+                result = Convert.ToDouble(magicStrings[choice]);
+            }
+            result = (result > 0) ? (2 * result) : (-2 * result);
+            return result;
+        }
+
     }
 }
