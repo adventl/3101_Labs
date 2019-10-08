@@ -178,8 +178,8 @@ namespace Program
         public double GenMagicNum(int choice, IFileReader fileReader)
         {
             double result = 0;
-
-            string[] magicStrings = fileReader.Read("D:\\Documents\\Dropbox\\SIT\\3101 - Software Verification and Validation\\Lab 1\\Lab1\\3101_Calculator\\MagicNumbers.txt");
+            string filepath = System.IO.Directory.GetCurrentDirectory() + "\\MagicNumbers\\MagicNumbers.txt";
+                              string[] magicStrings = fileReader.Read(filepath);
             if ((choice >= 0) && (choice < magicStrings.Length))
             {
                 result = Convert.ToDouble(magicStrings[choice]);
