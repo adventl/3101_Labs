@@ -16,7 +16,7 @@ namespace ICT3101_Calculator.UnitTests
         public void Setup()
         {
             _mockFileReader = new Mock<IFileReader>();
-            string filepath = System.IO.Directory.GetCurrentDirectory() + "\\MagicNumbers\\MagicNumbers.txt";
+            string filepath = System.IO.Directory.GetCurrentDirectory() + "/MagicNumbers/MagicNumbers.txt";
             _mockFileReader.Setup(fr =>
                     fr.Read(filepath))
                 .Returns(new string[10] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"});

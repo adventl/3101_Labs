@@ -178,15 +178,15 @@ namespace Program
         public double GenMagicNum(int choice, IFileReader fileReader)
         {
             double result = 0;
-            string filepath = System.IO.Directory.GetCurrentDirectory() + "\\MagicNumbers\\MagicNumbers.txt";
-                              string[] magicStrings = fileReader.Read(filepath);
+            string filepath = System.IO.Directory.GetCurrentDirectory() + "/MagicNumbers/MagicNumbers.txt";
+            string[] magicStrings = fileReader.Read(filepath);
             if ((choice >= 0) && (choice < magicStrings.Length))
             {
                 result = Convert.ToDouble(magicStrings[choice]);
             }
+
             result = (result > 0) ? (2 * result) : (-2 * result);
             return result;
         }
-
     }
 }
